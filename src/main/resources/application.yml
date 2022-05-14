@@ -20,7 +20,7 @@ spring:
     poolPreparedStatements: true
 
       #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
-      #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+    #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
     #则导入 log4j 依赖即可，Maven 地址：https://mvnrepository.com/artifact/log4j/log4j
     filters: stat,wall,log4j
     maxPoolPreparedStatementPerConnectionSize: 20
@@ -28,8 +28,8 @@ spring:
     mvc:
       path match:
         matching-strategy: ant_path_matcher
-logging:
-  # 设置logback.xml位置
-  #  config: classpath:log/logback.xml
-  # 设置log4j.properties位置
-  config: classpath:log4j.properties
+  logging:
+    # 设置logback.xml位置
+    #  config: classpath:log/logback.xml
+    # 设置log4j.properties位置
+    config: classpath:log4j.properties
